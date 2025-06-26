@@ -77,4 +77,4 @@ jobs:
         with:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
           severity: info
-          details: New tag created for Pokedex version
+          details: New tag created for Anecdotes version
