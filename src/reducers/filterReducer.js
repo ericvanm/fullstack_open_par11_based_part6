@@ -1,20 +1,20 @@
-import { createSlice, current } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    filter: "",
-  }
+  filter: "",
+};
 
-  const filterSlice = createSlice({
-    name: 'filter',
-    initialState,
-    reducers: {
-      filterAnecdotesOf(state, action) {
-        console.log('state', state)
-        const filter = action.payload
-        state.filter = filter
-      }
+const filterSlice = createSlice({
+  name: "filter",
+  initialState,
+  reducers: {
+    filterAnecdotesOf(state, action) {
+      console.log("state", state);
+      const filter = action.payload;
+      state.filter = filter;
     },
-  })
-  
-  export const { filterAnecdotesOf } = filterSlice.actions
-  export default filterSlice.reducer
+  },
+});
+
+export const { filterAnecdotesOf } = filterSlice.actions;
+export default filterSlice.reducer;
