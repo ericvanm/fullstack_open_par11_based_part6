@@ -9,7 +9,7 @@
     "server": "json-server -p3001 --watch db.json",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
-    "preview": "vite preview --port $PORT",
+    "preview": "vite preview --host --port $PORT",
     "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
