@@ -23,7 +23,7 @@ jobs:
       - name: Check style
         run: npm run lint
       - name: build
-        run: npm run preview
+        run: npm run build
       - name: test
         run: npm run test
       - name: Install Playwright Browsers
