@@ -23,7 +23,7 @@ jobs:
       - name: Check style
         run: npm run lint
       - name: build
-        run: npm run build
+        run: npm run preview
       - name: test
         run: npm run test
       - name: Install Playwright Browsers
@@ -54,10 +54,10 @@ jobs:
         uses: sarisia/actions-status-discord@v1.15.3
         if: ${{ success() && github.event_name == 'push' && ! contains(env.COMMIT_MESSAGES, '#skip') }}
         with:
-          title: "deploy Pokedex"
+          title: "deploy Anecdotes"
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          description: New version of Pokedex deployed !
+          description: New version of Anecdotes deployed !
           username: GitHub Actions
           url: "https://github.com/ericvanm/full-stack-open-pokedex"
   tag_release:
