@@ -6,13 +6,16 @@ const middlewares = jsonServer.defaults();
 
 const allowedOrigins = [
   "https://fullstack-open-par11-based-part6.onrender.com",
+  "https://fullstack-open-par11-based-part6.onrender.com:5173",
+  "http://fullstack-open-par11-based-part6.onrender.com:5173",
   "http://localhost:5173",
 ];
 
 server.use(
   cors({
     origin: function (origin, callback) {
-      if (allowedOrigins.includes(origin)) {
+      console.log("Origin:", origin);
+      if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS: " + origin));
