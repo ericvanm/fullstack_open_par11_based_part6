@@ -10,6 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
     "preview": "concurrently \"vite preview --host --port 5173\" \"npm run server\"",
+    "preview:full": "concurrently -k -s first \"npm run server\" \"vite preview --host --port 5173\"",
     "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
