@@ -30,8 +30,23 @@ jobs:
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+
+      - name: Check dist content
+        run: ls -l dist
+
+      - name: Start server in background
+        run: npm run preview:full &
+      - name: Wait for server
+        run: npx wait-on http://localhost:5173
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npm run test:e2e
+
+      - name: get screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshot
+          path: screenshot.png
+
       - name: Notify failure to Discord
         uses: sarisia/actions-status-discord@v1.15.3
         if: ${{ failure() }}
