@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = process.env.BASE_URL_BACKEND;
+const baseUrl = import.meta.env.VITE_BASE_URL_BACKEND;
 
 console.log("BASE_URL_BACKEND", baseUrl);
 
