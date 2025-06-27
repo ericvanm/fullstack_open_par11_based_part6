@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "server": "json-server -p3001 --watch db.json --host 0.0.0.0 ",
+    "server": "json-server -p3001 --watch db.json --host localhost ",
     "server:ci": "json-server -p3001 --watch db.json --host fullstack-open-par11-based-part6.onrender.com ",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
