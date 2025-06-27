@@ -9,9 +9,9 @@
     "server:ci": "json-server -p3001 --watch db.json --host fullstack-open-par11-based-part6.onrender.com ",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
-    "preview": "concurrently \"vite preview --host --port 5173\" \"npm run server\"",
-    "preview:ci": "concurrently \"vite preview --host --port 5173\" \"npm run server:ci\"",
-    "start": "concurrently \"npm run dev\" \"npm run server\""
+    "preview": "concurrently \"npm run server\" \"vite preview --host --port 5173\" \"wait-on http://localhost:5173\" ",
+    "preview:ci": "concurrently \"npm run server:ci\" \"vite preview --host --port 5173\" ",
+    "start": "concurrently \"npm run server\" \"npm run dev\" "
   },
   "dependencies": {
     "@playwright/test": "^1.53.1",
