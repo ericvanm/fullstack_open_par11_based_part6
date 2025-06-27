@@ -69,6 +69,9 @@ jobs:
       - name: Trigger deployment render
         if: ${{ github.event_name == 'push' && ! contains(env.COMMIT_MESSAGES, '#skip') }}
         run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
+      - name: Trigger deployment render
+        if: ${{ github.event_name == 'push' && ! contains(env.COMMIT_MESSAGES, '#skip') }}
+        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID2 }}?key=${{ secrets.RENDER_API_KEY2 }}
       - name: Notify success to Discord
         uses: sarisia/actions-status-discord@v1.15.3
         if: ${{ success() && github.event_name == 'push' && ! contains(env.COMMIT_MESSAGES, '#skip') }}
