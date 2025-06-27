@@ -34,6 +34,10 @@ jobs:
       - name: Check dist content
         run: ls -l dist
 
+      - name: Start server in background
+        run: npm run preview:ci &
+      - name: Wait for server
+        run: npx wait-on http://localhost:5173
       - name: Run Playwright tests
         run: npm run test:e2e
 
