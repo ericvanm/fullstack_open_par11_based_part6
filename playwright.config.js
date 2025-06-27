@@ -56,6 +56,6 @@ export default defineConfig({
     command: "npm run preview:full",
     url: "http://localhost:5173",
     timeout: 120000, // 2 minutes
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 });
