@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "server": "json-server -p3001 --watch db.json --host 0.0.0.0",
+    "server": "json-server -p3001 --watch db.json",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
     "preview": "concurrently \"vite preview --host --port 5173\" \"npm run server\"",
