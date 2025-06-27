@@ -35,7 +35,7 @@ jobs:
         run: ls -l dist
 
       - name: Start server in background
-        run: npm run preview
+        run: npm run preview &
 
       - name: Run Playwright tests
         run: npm run test:e2e
