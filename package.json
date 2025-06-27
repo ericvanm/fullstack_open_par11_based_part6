@@ -2,15 +2,15 @@
   "name": "redux-anecdotes",
   "private": true,
   "version": "0.2.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "server": "json-server -p3001 --watch db.json --host 0.0.0.0 --middlewares cors.js",
+    "server": "json-server -p3001 --watch db.json --host 0.0.0.0 ",
+    "server:ci": "json-server -p3001 --watch db.json --host fullstack-open-par11-based-part6.onrender.com ",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "test:e2e": "playwright test",
     "preview": "concurrently \"vite preview --host --port 5173\" \"npm run server\"",
-    "preview:full": "concurrently -k -s first \"npm run server\" \"vite preview --host --port 5173\" ",
+    "preview:ci": "concurrently \"vite preview --host --port 5173\" \"npm run server:ci\"",
     "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
     "axios": "^1.7.9",
+    "cors": "^2.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",
