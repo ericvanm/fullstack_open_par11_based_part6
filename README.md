@@ -16,3 +16,5 @@ At that point, I spent a lot of time to find a way to execute the code (seeing r
 I had to downgrade the JSON-SERVER to a former version (i.e 0.17.4) and bingo, I could manage that way the cors point.
 
 That was a long and hard exercice but indeed very interesting in terms of practice and knowledge.
+
+Eric
