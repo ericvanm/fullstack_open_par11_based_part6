@@ -4,6 +4,8 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+/* updated CORS configuration to allow requests from Vercel */
+
 const allowedOrigins = [
   "https://fullstack-open-par11-based-part6.onrender.com",
   "https://fullstack-open-par11-based-part6.onrender.com:5173",
