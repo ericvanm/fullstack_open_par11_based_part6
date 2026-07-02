@@ -8,6 +8,7 @@ const allowedOrigins = [
   "https://fullstack-open-par11-based-part6.onrender.com",
   "https://fullstack-open-par11-based-part6.onrender.com:5173",
   "http://fullstack-open-par11-based-part6.onrender.com:5173",
+  "https://fullstack-open-par11-based-part6.vercel.app",
   "http://localhost:5173",
 ];
 

@@ -7,6 +7,7 @@ export default defineConfig({
   preview: {
     allowedHosts: [
       "fullstack-open-par11-based-part6.onrender.com",
+      "fullstack-open-par11-based-part6.vercel.app",
       "localhost",
     ],
   },
